@@ -3,6 +3,22 @@
     "name": "Processor B",
     "num_qubits": 9,
     "topology": "Participant-designed sparse interaction-aware graph (12 undirected edges)",
+    "benchmark": {
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "optimization_level": 1,
+      "seed_transpiler": 42,
+      "shots": 4096,
+      "noise_rates": {
+        "single_qubit_depolarizing": 0.001,
+        "cx_depolarizing": 0.005,
+        "readout": 0.01
+      }
+    },
     "edges": [
       [
         0,
@@ -60,7 +76,9 @@
     "depth_p": 2,
     "physical_qubits": 9,
     "circuit_depth": 38,
-    "total_gate_count": 106,
+    "total_gate_count": 101,
+    "measurement_count": 5,
+    "unitary_depth": 37,
     "cx_count": 24,
     "swap_count_after_native_translation": 0,
     "single_qubit_rz_count": 52,
@@ -69,33 +87,82 @@
     "routing_swap_count": 0,
     "unconstrained_baseline_cx_count": 24,
     "cx_delta_vs_unconstrained_baseline": 0,
-    "ideal_expected_cut_from_shots": 16.339111328125,
-    "ideal_optimal_cut_shot_rate": 0.0703125,
-    "noisy_expected_cut_from_shots": 15.966796875,
+    "compiled_probability_max_abs_error": 5.551115123125783e-16,
+    "exact_logical_expected_cut": 19.240689773382066,
+    "exact_logical_approximation_ratio": 0.874576807881003,
+    "ideal_expected_cut_from_shots": 19.19482421875,
+    "ideal_optimal_cut_shot_rate": 0.239990234375,
+    "noisy_expected_cut_from_shots": 18.5634765625,
+    "noisy_cut_mean_standard_error": 0.05446779415456687,
+    "noisy_cut_mean_ci95_low": 18.456719685957047,
+    "noisy_cut_mean_ci95_high": 18.670233439042953,
     "noisy_best_observed_cut": 22,
-    "noisy_optimal_cut_shot_rate": 0.0654296875,
-    "noisy_approximation_ratio_of_sample_mean": 0.7257634943181818,
-    "shots_per_evaluation": 4096
+    "exact_noisy_expected_cut": 18.56308984047883,
+    "exact_noisy_approximation_ratio": 0.843776810930856,
+    "exact_noisy_optimal_cut_probability": 0.1983868049533301,
+    "exact_noisy_classical_distribution_fidelity": 0.9741519520871434,
+    "noisy_optimal_cut_shot_rate": 0.20458984375,
+    "noisy_approximation_ratio_of_sample_mean": 0.8437943892045454,
+    "noisy_classical_distribution_fidelity": 0.9755939177222784,
+    "noisy_total_variation_distance": 0.09712954205718545,
+    "shots_per_evaluation": 4096,
+    "primary_sample_seed": 42,
+    "repetitions": 5
+  },
+  "routing": {
+    "routing_swap_count": 0,
+    "routing_depth_before_translation": 14,
+    "initial_layout": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "measurement_physical_qubits_c0_first": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "swap_count_method": "analysis-only post_routing hook in the final compilation pipeline"
   },
   "ideal_summary": {
     "shots": 4096,
-    "expected_cut_from_samples": 16.339111328125,
+    "expected_cut_from_samples": 19.19482421875,
     "best_observed_cut": 22,
     "best_observed_assignment": "001011",
     "classical_optimum": 22,
-    "optimal_cut_shot_rate": 0.0703125,
+    "optimal_cut_shot_rate": 0.239990234375,
     "feasible_shot_rate": 1.0,
-    "approximation_ratio_of_sample_mean": 0.7426868785511364
+    "approximation_ratio_of_sample_mean": 0.8724920099431818,
+    "cut_mean_standard_error": 0.04717138333770058,
+    "cut_mean_ci95_low": 19.102368307408106,
+    "cut_mean_ci95_high": 19.287280130091894,
+    "approximation_ratio_of_best_observed": 1.0,
+    "optimal_cut_rate_ci95_low": 0.22715848696405283,
+    "optimal_cut_rate_ci95_high": 0.25330924622837103,
+    "classical_distribution_fidelity": 0.997158017333868,
+    "total_variation_distance": 0.03303084047819546
   },
   "noisy_summary": {
     "shots": 4096,
-    "expected_cut_from_samples": 15.966796875,
+    "expected_cut_from_samples": 18.5634765625,
     "best_observed_cut": 22,
     "best_observed_assignment": "001011",
     "classical_optimum": 22,
-    "optimal_cut_shot_rate": 0.0654296875,
+    "optimal_cut_shot_rate": 0.20458984375,
     "feasible_shot_rate": 1.0,
-    "approximation_ratio_of_sample_mean": 0.7257634943181818
+    "approximation_ratio_of_sample_mean": 0.8437943892045454,
+    "cut_mean_standard_error": 0.05446779415456687,
+    "cut_mean_ci95_low": 18.456719685957047,
+    "cut_mean_ci95_high": 18.670233439042953,
+    "approximation_ratio_of_best_observed": 1.0,
+    "optimal_cut_rate_ci95_low": 0.19251516031176594,
+    "optimal_cut_rate_ci95_high": 0.21721813279887522,
+    "classical_distribution_fidelity": 0.9755939177222784,
+    "total_variation_distance": 0.09712954205718545
   },
   "noise_rates": {
     "single_qubit_depolarizing": 0.001,
@@ -108,6 +175,8 @@
     "x",
     "cx"
   ],
+  "exact_noisy_distribution_method": "Aer density matrix plus independent 1% readout confusion on each measured bit",
   "optimization_level": 1,
-  "seed_transpiler": 42
+  "seed_transpiler": 42,
+  "distribution_fidelity_definition": "(sum sqrt(p_exact * p_observed))**2; classical, not quantum state fidelity"
 }

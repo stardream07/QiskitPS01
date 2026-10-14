@@ -45,7 +45,7 @@ def graph_edge_rows(graph: nx.Graph) -> list[dict]:
     ]
 
 
-def save_graph_data(graph: nx.Graph, root: Path) -> None:
+def save_graph_data(graph: nx.Graph, root: Path, graph_seed: int = GRAPH_SEED, weight_seed: int = WEIGHT_SEED) -> None:
     """Persist generated graph inputs for reproducibility and inspection."""
     raw_dir = root / "data" / "raw"
     processed_dir = root / "data" / "processed"
@@ -56,8 +56,8 @@ def save_graph_data(graph: nx.Graph, root: Path) -> None:
         "problem_statement": "PS-O1: Max-Cut on Weighted Graphs",
         "num_nodes": N_NODES,
         "edge_probability": EDGE_PROBABILITY,
-        "graph_seed": GRAPH_SEED,
-        "weight_seed": WEIGHT_SEED,
+        "graph_seed": graph_seed,
+        "weight_seed": weight_seed,
         "weight_range_inclusive": [MIN_WEIGHT, MAX_WEIGHT],
         "fixed_node": 0,
         "fixed_node_value": 0,
@@ -72,6 +72,8 @@ def full_assignment_from_reduced(bits: tuple[int, ...] | list[int]) -> tuple[int
     """Map five logical bits q0..q4 to graph nodes 1..5, with node 0 fixed to 0."""
     if len(bits) != N_LOGICAL_QUBITS:
         raise ValueError(f"Expected {N_LOGICAL_QUBITS} reduced bits, got {len(bits)}")
+    if any(bit not in (0, 1) for bit in bits):
+        raise ValueError("Decision bits must be binary")
     return (0, *(int(bit) for bit in bits))
 
 
@@ -79,6 +81,8 @@ def cut_value(graph: nx.Graph, assignment: tuple[int, ...] | list[int]) -> int:
     """Return total weight of edges whose endpoints are in different groups."""
     if len(assignment) != graph.number_of_nodes():
         raise ValueError("Assignment length must equal the number of graph nodes")
+    if any(bit not in (0, 1) for bit in assignment):
+        raise ValueError("Assignment bits must be binary")
     return int(sum(
         int(data["weight"])
         for u, v, data in graph.edges(data=True)
@@ -88,6 +92,8 @@ def cut_value(graph: nx.Graph, assignment: tuple[int, ...] | list[int]) -> int:
 
 def reduced_bits_from_integer(index: int, n_qubits: int = N_LOGICAL_QUBITS) -> tuple[int, ...]:
     """Qiskit-style little-endian decision bits: q0 is the least significant bit."""
+    if not 0 <= index < (1 << n_qubits):
+        raise ValueError("Basis index is outside the register")
     return tuple((index >> q) & 1 for q in range(n_qubits))
 
 
@@ -148,3 +154,28 @@ def reduced_pair_edges(graph: nx.Graph) -> list[tuple[int, int, int]]:
         if u != 0 and v != 0:
             output.append((u - 1, v - 1, int(data["weight"])))
     return output
+
+
+def cost_diagonal(graph: nx.Graph) -> np.ndarray:
+    """The 32 diagonal eigenvalues of the five-qubit cut Hamiltonian."""
+    return np.array([
+        cut_value(graph, full_assignment_from_reduced(reduced_bits_from_integer(i)))
+        for i in range(1 << N_LOGICAL_QUBITS)
+    ], dtype=float)
+
+
+def build_cost_hamiltonian(graph: nx.Graph):
+    """Return C = sum w(1-Zu Zv)/2 with Z0 replaced by +1.
+
+    Qiskit Pauli strings are big endian: logical q0 is the rightmost letter.
+    The identity offset is retained for expectations and exact verification.
+    """
+    from qiskit.quantum_info import SparsePauliOp
+    terms = [("I" * N_LOGICAL_QUBITS, sum(d["weight"] for _, _, d in graph.edges(data=True)) / 2)]
+    for u, v, data in sorted(graph.edges(data=True)):
+        label = ["I"] * N_LOGICAL_QUBITS
+        for node in (u, v):
+            if node != 0:
+                label[N_LOGICAL_QUBITS - node] = "Z"
+        terms.append(("".join(label), -float(data["weight"]) / 2))
+    return SparsePauliOp.from_list(terms).simplify()

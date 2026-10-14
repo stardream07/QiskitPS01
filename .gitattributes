@@ -1,0 +1,12 @@
+* text=auto eol=lf
+# Preserve generated evidence byte-for-byte so manifest hashes survive checkout.
+results/** -text
+data/** -text
+*.ipynb -text
+*.png binary
+*.qpy binary
+*.csv whitespace=cr-at-eol
+*.json whitespace=cr-at-eol
+*.ipynb whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol,-blank-at-eol
+*.md whitespace=cr-at-eol,-blank-at-eol
