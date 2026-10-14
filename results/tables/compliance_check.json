@@ -1,0 +1,1268 @@
+{
+  "local_requirements_passed": true,
+  "checks_passed": 314,
+  "checks": [
+    {
+      "check": "Required structure: README.md",
+      "passed": true
+    },
+    {
+      "check": "Required structure: main.ipynb",
+      "passed": true
+    },
+    {
+      "check": "Required structure: requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "Required structure: report.md",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/problem.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/processors.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/routing.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/metrics.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: src/visualization.py",
+      "passed": true
+    },
+    {
+      "check": "Required structure: processors/processor_A.json",
+      "passed": true
+    },
+    {
+      "check": "Required structure: processors/processor_B.json",
+      "passed": true
+    },
+    {
+      "check": "Required structure: data/raw",
+      "passed": true
+    },
+    {
+      "check": "Required structure: data/processed",
+      "passed": true
+    },
+    {
+      "check": "Required structure: results/tables",
+      "passed": true
+    },
+    {
+      "check": "Required structure: results/figures",
+      "passed": true
+    },
+    {
+      "check": "Exactly one selected problem statement",
+      "passed": true
+    },
+    {
+      "check": "Team size is between two and six",
+      "passed": true
+    },
+    {
+      "check": "Every direct dependency is pinned",
+      "passed": true
+    },
+    {
+      "check": "Full tested environment lock is included",
+      "passed": true
+    },
+    {
+      "check": "Completed documentation: README.md",
+      "passed": true
+    },
+    {
+      "check": "Completed documentation: report.md",
+      "passed": true
+    },
+    {
+      "check": "Notebook has no saved errors",
+      "passed": true
+    },
+    {
+      "check": "Every notebook code cell was executed",
+      "passed": true
+    },
+    {
+      "check": "Exact classical optimum is 22",
+      "passed": true
+    },
+    {
+      "check": "Cost Hamiltonian matches all 32 classical representatives",
+      "passed": true
+    },
+    {
+      "check": "Saved graph is the reproducible official instance",
+      "passed": true
+    },
+    {
+      "check": "Official baseline p=1",
+      "passed": true
+    },
+    {
+      "check": "Official common native gates and noise p=1",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/metrics.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/problem.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/processors.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/qaoa.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/routing.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/visualization.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: src/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: run_experiment.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: processors/processor_A.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: processors/processor_B.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/logical_probabilities_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_compiled_circuit_p1.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_exact_probabilities_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_ideal_counts_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_ideal_counts_p1_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_ideal_counts_p1_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_ideal_counts_p1_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_ideal_counts_p1_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_noisy_counts_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_noisy_counts_p1_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_noisy_counts_p1_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_noisy_counts_p1_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_noisy_counts_p1_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_a_summary_p1.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_compiled_circuit_p1.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_exact_probabilities_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_ideal_counts_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_ideal_counts_p1_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_ideal_counts_p1_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_ideal_counts_p1_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_ideal_counts_p1_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_noisy_counts_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_noisy_counts_p1_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_noisy_counts_p1_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_noisy_counts_p1_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_noisy_counts_p1_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_b_summary_p1.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/processor_comparison_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/qaoa_convergence_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/tables/sampling_repetitions_p1.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/figures/classical_vs_qaoa_cut_p1.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/figures/noisy_cut_distribution_p1.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/figures/processor_comparison_p1.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/figures/qaoa_convergence_p1.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: results/figures/solution_quality_p1.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: assets/circuits/logical_p1.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: assets/circuits/processor_a_p1.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: assets/circuits/processor_b_p1.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: data/processed/qaoa_parameters_p1.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: data/processed/maxcut_graph.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: data/raw/maxcut_edges.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=1: data/processed/cost_hamiltonian.json",
+      "passed": true
+    },
+    {
+      "check": "Recomputed optimized expectation p=1",
+      "passed": true
+    },
+    {
+      "check": "QAOA beats uniform random mean p=1",
+      "passed": true
+    },
+    {
+      "check": "Exactly A and B benchmarked p=1",
+      "passed": true
+    },
+    {
+      "check": "Physical budget A",
+      "passed": true
+    },
+    {
+      "check": "Saved native circuit A p=1: legal coupling and logical equivalence",
+      "passed": true
+    },
+    {
+      "check": "Circuit recompilation reproducible A p=1",
+      "passed": true
+    },
+    {
+      "check": "Exact noisy density-matrix result A p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled circuit_depth A p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled total_gate_count A p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled cx_count A p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled measurement_count A p=1",
+      "passed": true
+    },
+    {
+      "check": "Measured SWAP routing A p=1",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Noisy run sampled an exact optimum A p=1",
+      "passed": true
+    },
+    {
+      "check": "Physical budget B",
+      "passed": true
+    },
+    {
+      "check": "Saved native circuit B p=1: legal coupling and logical equivalence",
+      "passed": true
+    },
+    {
+      "check": "Circuit recompilation reproducible B p=1",
+      "passed": true
+    },
+    {
+      "check": "Exact noisy density-matrix result B p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled circuit_depth B p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled total_gate_count B p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled cx_count B p=1",
+      "passed": true
+    },
+    {
+      "check": "Compiled measurement_count B p=1",
+      "passed": true
+    },
+    {
+      "check": "Measured SWAP routing B p=1",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=1 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Noisy run sampled an exact optimum B p=1",
+      "passed": true
+    },
+    {
+      "check": "Exported figure qaoa_convergence p=1",
+      "passed": true
+    },
+    {
+      "check": "Exported figure processor_comparison p=1",
+      "passed": true
+    },
+    {
+      "check": "Exported figure noisy_cut_distribution p=1",
+      "passed": true
+    },
+    {
+      "check": "Exported figure classical_vs_qaoa_cut p=1",
+      "passed": true
+    },
+    {
+      "check": "Official baseline p=2",
+      "passed": true
+    },
+    {
+      "check": "Official common native gates and noise p=2",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/evaluation.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/metrics.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/problem.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/processors.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/qaoa.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/routing.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/visualization.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: src/__init__.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: run_experiment.py",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: requirements.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: processors/processor_A.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: processors/processor_B.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/logical_probabilities_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_compiled_circuit_p2.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_exact_probabilities_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_ideal_counts_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_ideal_counts_p2_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_ideal_counts_p2_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_ideal_counts_p2_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_ideal_counts_p2_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_noisy_counts_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_noisy_counts_p2_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_noisy_counts_p2_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_noisy_counts_p2_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_noisy_counts_p2_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_a_summary_p2.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_compiled_circuit_p2.txt",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_exact_probabilities_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_ideal_counts_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_ideal_counts_p2_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_ideal_counts_p2_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_ideal_counts_p2_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_ideal_counts_p2_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_noisy_counts_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_noisy_counts_p2_seed43.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_noisy_counts_p2_seed44.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_noisy_counts_p2_seed45.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_noisy_counts_p2_seed46.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_b_summary_p2.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/processor_comparison_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/qaoa_convergence_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/tables/sampling_repetitions_p2.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/figures/classical_vs_qaoa_cut_p2.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/figures/noisy_cut_distribution_p2.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/figures/processor_comparison_p2.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/figures/qaoa_convergence_p2.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: results/figures/solution_quality_p2.png",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: assets/circuits/logical_p2.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: assets/circuits/processor_a_p2.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: assets/circuits/processor_b_p2.qpy",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: data/processed/qaoa_parameters_p2.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: data/processed/maxcut_graph.json",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: data/raw/maxcut_edges.csv",
+      "passed": true
+    },
+    {
+      "check": "SHA256 p=2: data/processed/cost_hamiltonian.json",
+      "passed": true
+    },
+    {
+      "check": "Recomputed optimized expectation p=2",
+      "passed": true
+    },
+    {
+      "check": "QAOA beats uniform random mean p=2",
+      "passed": true
+    },
+    {
+      "check": "Warm-started p=2 matches or improves p=1",
+      "passed": true
+    },
+    {
+      "check": "Exactly A and B benchmarked p=2",
+      "passed": true
+    },
+    {
+      "check": "Physical budget A",
+      "passed": true
+    },
+    {
+      "check": "Saved native circuit A p=2: legal coupling and logical equivalence",
+      "passed": true
+    },
+    {
+      "check": "Circuit recompilation reproducible A p=2",
+      "passed": true
+    },
+    {
+      "check": "Exact noisy density-matrix result A p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled circuit_depth A p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled total_gate_count A p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled cx_count A p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled measurement_count A p=2",
+      "passed": true
+    },
+    {
+      "check": "Measured SWAP routing A p=2",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots A p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics A p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values A p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Noisy run sampled an exact optimum A p=2",
+      "passed": true
+    },
+    {
+      "check": "Physical budget B",
+      "passed": true
+    },
+    {
+      "check": "Saved native circuit B p=2: legal coupling and logical equivalence",
+      "passed": true
+    },
+    {
+      "check": "Circuit recompilation reproducible B p=2",
+      "passed": true
+    },
+    {
+      "check": "Exact noisy density-matrix result B p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled circuit_depth B p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled total_gate_count B p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled cx_count B p=2",
+      "passed": true
+    },
+    {
+      "check": "Compiled measurement_count B p=2",
+      "passed": true
+    },
+    {
+      "check": "Measured SWAP routing B p=2",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 ideal seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 ideal seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 ideal seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 ideal seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 ideal seed=46",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 noisy seed=42",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 noisy seed=43",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 noisy seed=44",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 noisy seed=45",
+      "passed": true
+    },
+    {
+      "check": "4096 shots B p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Recomputed sample metrics B p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Bit order and cut values B p=2 noisy seed=46",
+      "passed": true
+    },
+    {
+      "check": "Noisy run sampled an exact optimum B p=2",
+      "passed": true
+    },
+    {
+      "check": "Exported figure qaoa_convergence p=2",
+      "passed": true
+    },
+    {
+      "check": "Exported figure processor_comparison p=2",
+      "passed": true
+    },
+    {
+      "check": "Exported figure noisy_cut_distribution p=2",
+      "passed": true
+    },
+    {
+      "check": "Exported figure classical_vs_qaoa_cut p=2",
+      "passed": true
+    }
+  ],
+  "external_requirements": {
+    "repository_url": "https://github.com/stardream07/QiskitPS01",
+    "public_repository_final_files_require_upload": true,
+    "portal_submission_confirmed": false
+  },
+  "note": "Local validation does not confirm upload to GitHub or submission to the event portal."
+}

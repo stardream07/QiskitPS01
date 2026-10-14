@@ -1,21 +1,330 @@
 {
   "depth_p": 2,
   "gammas": [
-    2.8677336637409923,
-    1.3742724727008917
+    0.13687187127945652,
+    0.29178446887957443
   ],
   "betas": [
-    2.0312260336932844,
-    0.43775704722202796
+    0.4514598635922204,
+    0.2598094407573701
   ],
-  "best_ideal_expected_cut": 16.40048048019947,
+  "best_ideal_expected_cut": 19.240689773382066,
   "optimizer": {
-    "success": false,
-    "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
-    "nfev": 160,
-    "nit": 160,
-    "restarts": 3,
-    "maxiter_per_restart": 160
+    "method": "COBYLA",
+    "restarts": 16,
+    "maxiter_per_restart": 800,
+    "total_evaluations": 4633,
+    "grid_evaluations": 0,
+    "tolerance": 1e-07,
+    "warm_start_used": true,
+    "qiskit_expected_cut_check": 19.24068977338206,
+    "runs": [
+      {
+        "restart": 0,
+        "initial_angles": [
+          0.1715264677404816,
+          0.0,
+          0.3907391689764561,
+          0.0
+        ],
+        "final_angles": [
+          0.13687187127945652,
+          0.29178446887957443,
+          0.4514598635922204,
+          0.2598094407573701
+        ],
+        "expected_cut": 19.240689773382066,
+        "success": true,
+        "nfev": 169,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 1,
+        "initial_angles": [
+          0.0857632338702408,
+          0.0857632338702408,
+          0.19536958448822805,
+          0.19536958448822805
+        ],
+        "final_angles": [
+          0.13687189597395752,
+          0.29178440160372315,
+          0.4514596434087206,
+          0.259809237019064
+        ],
+        "expected_cut": 19.240689773381547,
+        "success": true,
+        "nfev": 203,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 2,
+        "initial_angles": [
+          4.862909272689599,
+          2.757554564287996,
+          2.6973649175810768,
+          2.190846276941291
+        ],
+        "final_angles": [
+          5.19171092379201,
+          2.9575076742498343,
+          2.5071133279287157,
+          2.396067568258576
+        ],
+        "expected_cut": 14.81584809307811,
+        "success": true,
+        "nfev": 275,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 3,
+        "initial_angles": [
+          0.5917337285168199,
+          6.13001602516006,
+          2.391190896128417,
+          2.4694938467072425
+        ],
+        "final_angles": [
+          1.0546889160104447,
+          6.048086747066522,
+          2.3163838592511015,
+          2.644509949808936
+        ],
+        "expected_cut": 17.444658120017678,
+        "success": true,
+        "nfev": 215,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 4,
+        "initial_angles": [
+          0.8049616944763924,
+          2.829858307545725,
+          1.1648963488946873,
+          2.911518080570994
+        ],
+        "final_angles": [
+          0.9687218347682944,
+          2.733591177701144,
+          1.20654592820409,
+          2.8362879483195225
+        ],
+        "expected_cut": 15.566540129044576,
+        "success": true,
+        "nfev": 311,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 5,
+        "initial_angles": [
+          4.0455238622962515,
+          5.169563679814652,
+          1.3930267895333472,
+          0.71389149897019
+        ],
+        "final_angles": [
+          3.7463984480102,
+          5.671662447667108,
+          1.4495276509182458,
+          0.7517927798625446
+        ],
+        "expected_cut": 18.041724999859383,
+        "success": true,
+        "nfev": 239,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 6,
+        "initial_angles": [
+          3.4845589853632135,
+          0.40097564589827117,
+          2.6000800098138064,
+          1.98443223581609
+        ],
+        "final_angles": [
+          3.8250221422270876,
+          0.29508472299541866,
+          2.1015462796010245,
+          2.052794535157771
+        ],
+        "expected_cut": 17.060408196366176,
+        "success": true,
+        "nfev": 242,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 7,
+        "initial_angles": [
+          4.763205750057398,
+          2.2275523539672073,
+          3.0495377822931538,
+          2.8058227535116944
+        ],
+        "final_angles": [
+          4.68360269163053,
+          2.6762982242904165,
+          3.5883578034530856,
+          2.5136315932244293
+        ],
+        "expected_cut": 16.51174665959713,
+        "success": true,
+        "nfev": 223,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 8,
+        "initial_angles": [
+          4.890727752164925,
+          1.2229510693839025,
+          1.466247276584905,
+          0.13761358879672583
+        ],
+        "final_angles": [
+          4.6789838436424285,
+          1.7309262371807235,
+          1.6632535921110996,
+          0.48136994138899025
+        ],
+        "expected_cut": 16.46692210633246,
+        "success": true,
+        "nfev": 262,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 9,
+        "initial_angles": [
+          0.9694294696110178,
+          4.291723147097387,
+          2.3397393176716945,
+          3.0395214676919404
+        ],
+        "final_angles": [
+          0.860502679021264,
+          5.229116096446647,
+          3.061618341168792,
+          2.786327839866344
+        ],
+        "expected_cut": 17.686847306197762,
+        "success": false,
+        "nfev": 800,
+        "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times."
+      },
+      {
+        "restart": 10,
+        "initial_angles": [
+          2.047221102960163,
+          2.327666981860357,
+          1.4751530871544736,
+          0.5952418297648656
+        ],
+        "final_angles": [
+          2.2052205219857974,
+          2.3020702659756735,
+          1.5398500279923122,
+          0.71998805760286
+        ],
+        "expected_cut": 15.787780599270537,
+        "success": true,
+        "nfev": 232,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 11,
+        "initial_angles": [
+          0.8163208934104896,
+          2.988942203015736,
+          0.7128567440090996,
+          2.104282724966207
+        ],
+        "final_angles": [
+          0.8420327652811258,
+          3.4746273616688685,
+          1.2241644897447936,
+          1.8707492928849563
+        ],
+        "expected_cut": 16.144005390935313,
+        "success": true,
+        "nfev": 239,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 12,
+        "initial_angles": [
+          2.746706513663991,
+          5.2318714070794075,
+          2.199947700015573,
+          0.9813287457923376
+        ],
+        "final_angles": [
+          3.007222873089807,
+          5.107845420201038,
+          1.902627959043916,
+          0.9730135802664904
+        ],
+        "expected_cut": 16.20893224347622,
+        "success": true,
+        "nfev": 507,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 13,
+        "initial_angles": [
+          5.229242555882528,
+          5.056483586765725,
+          1.2172992289860773,
+          0.9058094531307292
+        ],
+        "final_angles": [
+          5.372602871298088,
+          5.426286090526202,
+          1.6379763478292804,
+          0.7388479174911572
+        ],
+        "expected_cut": 15.826123006790292,
+        "success": true,
+        "nfev": 188,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 14,
+        "initial_angles": [
+          4.288245722791693,
+          0.8780907516558714,
+          0.6280301402881412,
+          0.023129252563505273
+        ],
+        "final_angles": [
+          3.832395802301713,
+          1.4528283802536062,
+          0.27966866850216854,
+          0.5073450819852563
+        ],
+        "expected_cut": 16.451511251482007,
+        "success": true,
+        "nfev": 276,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      },
+      {
+        "restart": 15,
+        "initial_angles": [
+          4.944391686582878,
+          4.177381133604818,
+          2.2153423730583595,
+          2.452732588302892
+        ],
+        "final_angles": [
+          4.919249551106916,
+          4.68032028580316,
+          2.6747939449573352,
+          2.711491039894996
+        ],
+        "expected_cut": 16.655994826207866,
+        "success": true,
+        "nfev": 236,
+        "message": "Return from COBYLA because the trust region radius reaches its lower bound."
+      }
+    ],
+    "global_optimality_claimed": false
   },
   "seed": 42
 }

@@ -22,7 +22,6 @@ def _save(fig, path: Path | None):
     if path is not None:
         path.parent.mkdir(parents=True, exist_ok=True)
         fig.savefig(path, dpi=180, bbox_inches="tight", facecolor="white")
-    plt.show()
     plt.close(fig)
 
 

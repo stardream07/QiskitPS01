@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import networkx as nx
 
 BASIS_GATES = ["rz", "sx", "x", "cx"]
 TRANSPILE_SEED = 42
@@ -17,8 +18,32 @@ def load_processor(path: Path) -> dict:
     missing = required - processor.keys()
     if missing:
         raise ValueError(f"Processor file {path} is missing required keys: {sorted(missing)}")
-    if any(not (0 <= int(u) < processor["num_qubits"] and 0 <= int(v) < processor["num_qubits"]) for u, v in processor["edges"]):
-        raise ValueError(f"An edge in {path} uses a qubit index outside its declared budget")
+    n = processor["num_qubits"]
+    if type(n) is not int or n not in (5, 9):
+        raise ValueError("Phase 1 processor budgets must be 5 or 9 physical qubits")
+    if not isinstance(processor["edges"], list) or not processor["edges"]:
+        raise ValueError("A processor must specify a nonempty list of edges")
+    unique = set()
+    for edge in processor["edges"]:
+        if not isinstance(edge, list) or len(edge) != 2:
+            raise ValueError("Each coupling edge must contain exactly two endpoints")
+        u, v = edge
+        if type(u) is not int or type(v) is not int or not (0 <= u < n and 0 <= v < n) or u == v:
+            raise ValueError("Coupling endpoints must be distinct integer qubits within the budget")
+        link = tuple(sorted(edge))
+        if link in unique:
+            raise ValueError("Duplicate undirected coupling edge")
+        unique.add(link)
+    topology = nx.Graph()
+    topology.add_nodes_from(range(n))
+    topology.add_edges_from(unique)
+    if not nx.is_connected(topology):
+        raise ValueError("All declared physical qubits must form a connected graph")
+    config = processor.get("benchmark", {})
+    expected = {"basis_gates": BASIS_GATES, "optimization_level": 1,
+                "seed_transpiler": TRANSPILE_SEED, "shots": SHOTS, "noise_rates": NOISE_RATES}
+    if config != expected:
+        raise ValueError("Processor benchmark config must match the official common baseline")
     return processor
 
 
@@ -51,42 +76,3 @@ def make_noise_model():
     noise.add_all_qubit_quantum_error(two_qubit_error, ["cx"])
     noise.add_all_qubit_readout_error(readout_error)
     return noise
-
-
-def transpile_for_processor(circuit, processor: dict, seed: int = TRANSPILE_SEED):
-    """Transpile a measured logical circuit to the official basis and coupling map."""
-    from qiskit import transpile
-    coupling_map = make_coupling_map(processor)
-    # Explicitly map logical q0..q4 onto physical nodes 0..4. Processor B's
-    # custom core is designed for the reduced Max-Cut interaction graph.
-    layout = list(range(circuit.num_qubits))
-    compiled = transpile(
-        circuit,
-        basis_gates=BASIS_GATES,
-        coupling_map=coupling_map,
-        initial_layout=layout,
-        optimization_level=1,
-        seed_transpiler=seed,
-    )
-    return compiled
-
-
-def get_routing_stage_swap_count(circuit, processor: dict, seed: int = TRANSPILE_SEED) -> int:
-    """Estimate inserted routing SWAPs before native-basis decomposition.
-
-    This diagnostic intentionally retains the SWAP gate as an allowed target
-    operation so inserted routing swaps can be counted. It is not the final
-    hardware-basis circuit; CX count/depth must be taken from the final compile.
-    """
-    from qiskit import transpile
-    coupling_map = make_coupling_map(processor)
-    route_basis = ["h", "rx", "rz", "rzz", "cx", "swap"]
-    routed = transpile(
-        circuit,
-        basis_gates=route_basis,
-        coupling_map=coupling_map,
-        initial_layout=list(range(circuit.num_qubits)),
-        optimization_level=1,
-        seed_transpiler=seed,
-    )
-    return int(routed.count_ops().get("swap", 0))
