@@ -1,0 +1,21 @@
+{
+  "depth_p": 2,
+  "gammas": [
+    2.8677336637409923,
+    1.3742724727008917
+  ],
+  "betas": [
+    2.0312260336932844,
+    0.43775704722202796
+  ],
+  "best_ideal_expected_cut": 16.40048048019947,
+  "optimizer": {
+    "success": false,
+    "message": "Return from COBYLA because the objective function has been evaluated MAXFUN times.",
+    "nfev": 160,
+    "nit": 160,
+    "restarts": 3,
+    "maxiter_per_restart": 160
+  },
+  "seed": 42
+}

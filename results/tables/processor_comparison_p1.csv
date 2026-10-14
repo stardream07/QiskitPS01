@@ -1,0 +1,3 @@
+processor,depth_p,physical_qubits,circuit_depth,total_gate_count,cx_count,swap_count_after_native_translation,single_qubit_rz_count,single_qubit_sx_count,single_qubit_x_count,routing_swap_count,unconstrained_baseline_cx_count,cx_delta_vs_unconstrained_baseline,ideal_expected_cut_from_shots,ideal_optimal_cut_shot_rate,noisy_expected_cut_from_shots,noisy_best_observed_cut,noisy_optimal_cut_shot_rate,noisy_approximation_ratio_of_sample_mean,shots_per_evaluation
+Processor A,1,5,38,78,27,0,31,15,0,5,12,15,15.13037109375,0.008056640625,14.921875,22,0.01416015625,0.6782670454545454,4096
+Processor B,1,9,21,63,12,0,31,15,0,0,12,0,15.171630859375,0.005859375,15.055419921875,22,0.010986328125,0.6843372691761364,4096

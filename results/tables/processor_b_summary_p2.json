@@ -1,0 +1,113 @@
+{
+  "processor": {
+    "name": "Processor B",
+    "num_qubits": 9,
+    "topology": "Participant-designed sparse interaction-aware graph (12 undirected edges)",
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "design_rationale": "The six-node Max-Cut instance is symmetry-reduced by fixing graph node 0, leaving five logical qubits. The six pairwise interactions among those five logical variables are mapped onto the six edges in physical nodes 0-4. Four extra physical qubits and six sparse extension edges bring the model to nine qubits and twelve edges. This is a participant-designed connectivity choice, not a mandated topology; the report should discuss that it is tailored to this fixed instance."
+  },
+  "metrics": {
+    "processor": "Processor B",
+    "depth_p": 2,
+    "physical_qubits": 9,
+    "circuit_depth": 38,
+    "total_gate_count": 106,
+    "cx_count": 24,
+    "swap_count_after_native_translation": 0,
+    "single_qubit_rz_count": 52,
+    "single_qubit_sx_count": 25,
+    "single_qubit_x_count": 0,
+    "routing_swap_count": 0,
+    "unconstrained_baseline_cx_count": 24,
+    "cx_delta_vs_unconstrained_baseline": 0,
+    "ideal_expected_cut_from_shots": 16.339111328125,
+    "ideal_optimal_cut_shot_rate": 0.0703125,
+    "noisy_expected_cut_from_shots": 15.966796875,
+    "noisy_best_observed_cut": 22,
+    "noisy_optimal_cut_shot_rate": 0.0654296875,
+    "noisy_approximation_ratio_of_sample_mean": 0.7257634943181818,
+    "shots_per_evaluation": 4096
+  },
+  "ideal_summary": {
+    "shots": 4096,
+    "expected_cut_from_samples": 16.339111328125,
+    "best_observed_cut": 22,
+    "best_observed_assignment": "001011",
+    "classical_optimum": 22,
+    "optimal_cut_shot_rate": 0.0703125,
+    "feasible_shot_rate": 1.0,
+    "approximation_ratio_of_sample_mean": 0.7426868785511364
+  },
+  "noisy_summary": {
+    "shots": 4096,
+    "expected_cut_from_samples": 15.966796875,
+    "best_observed_cut": 22,
+    "best_observed_assignment": "001011",
+    "classical_optimum": 22,
+    "optimal_cut_shot_rate": 0.0654296875,
+    "feasible_shot_rate": 1.0,
+    "approximation_ratio_of_sample_mean": 0.7257634943181818
+  },
+  "noise_rates": {
+    "single_qubit_depolarizing": 0.001,
+    "cx_depolarizing": 0.005,
+    "readout": 0.01
+  },
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 42
+}

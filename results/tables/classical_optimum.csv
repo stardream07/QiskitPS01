@@ -1,0 +1,2 @@
+classical_optimum_cut_value,full_64_assignment_optimum_check,symmetry_reduction_verified,number_of_optimum_representatives_with_node0_fixed,one_optimal_assignment_node0_to_node5,graph_seed,weight_seed,symmetry_reduction
+22,22,True,1,001011,42,42,fix node 0 to group 0; cut value is unchanged under complementing all bits

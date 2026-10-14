@@ -1,0 +1,81 @@
+{
+  "processor": {
+    "name": "Processor A",
+    "num_qubits": 5,
+    "topology": "Linear chain",
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "design_rationale": "Baseline five-qubit linear architecture, matching the Phase 1 reference layout. Limited connectivity makes non-neighbour interactions more expensive to route."
+  },
+  "metrics": {
+    "processor": "Processor A",
+    "depth_p": 2,
+    "physical_qubits": 5,
+    "circuit_depth": 69,
+    "total_gate_count": 133,
+    "cx_count": 51,
+    "swap_count_after_native_translation": 0,
+    "single_qubit_rz_count": 52,
+    "single_qubit_sx_count": 25,
+    "single_qubit_x_count": 0,
+    "routing_swap_count": 9,
+    "unconstrained_baseline_cx_count": 24,
+    "cx_delta_vs_unconstrained_baseline": 27,
+    "ideal_expected_cut_from_shots": 16.453369140625,
+    "ideal_optimal_cut_shot_rate": 0.0751953125,
+    "noisy_expected_cut_from_shots": 15.795166015625,
+    "noisy_best_observed_cut": 22,
+    "noisy_optimal_cut_shot_rate": 0.068603515625,
+    "noisy_approximation_ratio_of_sample_mean": 0.7179620916193182,
+    "shots_per_evaluation": 4096
+  },
+  "ideal_summary": {
+    "shots": 4096,
+    "expected_cut_from_samples": 16.453369140625,
+    "best_observed_cut": 22,
+    "best_observed_assignment": "001011",
+    "classical_optimum": 22,
+    "optimal_cut_shot_rate": 0.0751953125,
+    "feasible_shot_rate": 1.0,
+    "approximation_ratio_of_sample_mean": 0.7478804154829546
+  },
+  "noisy_summary": {
+    "shots": 4096,
+    "expected_cut_from_samples": 15.795166015625,
+    "best_observed_cut": 22,
+    "best_observed_assignment": "001011",
+    "classical_optimum": 22,
+    "optimal_cut_shot_rate": 0.068603515625,
+    "feasible_shot_rate": 1.0,
+    "approximation_ratio_of_sample_mean": 0.7179620916193182
+  },
+  "noise_rates": {
+    "single_qubit_depolarizing": 0.001,
+    "cx_depolarizing": 0.005,
+    "readout": 0.01
+  },
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 42
+}

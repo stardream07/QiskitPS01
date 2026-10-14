@@ -1,0 +1,7 @@
+{
+  "name": "Processor A",
+  "num_qubits": 5,
+  "topology": "Linear chain",
+  "edges": [[0, 1], [1, 2], [2, 3], [3, 4]],
+  "design_rationale": "Baseline five-qubit linear architecture, matching the Phase 1 reference layout. Limited connectivity makes non-neighbour interactions more expensive to route."
+}

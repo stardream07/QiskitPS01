@@ -1,0 +1,10 @@
+# Direct dependencies pinned for reproducible Phase 1 runs (Python 3.12 recommended)
+numpy==2.3.5
+pandas==2.2.3
+matplotlib==3.10.8
+networkx==3.6.1
+scipy==1.17.0
+qiskit==2.5.0
+qiskit-aer==0.17.2
+jupyterlab==4.4.7
+ipykernel==6.30.1

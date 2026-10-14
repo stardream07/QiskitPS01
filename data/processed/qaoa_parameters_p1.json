@@ -1,0 +1,19 @@
+{
+  "depth_p": 1,
+  "gammas": [
+    0.8102072914905284
+  ],
+  "betas": [
+    1.1895316235449165
+  ],
+  "best_ideal_expected_cut": 15.129230265697801,
+  "optimizer": {
+    "success": true,
+    "message": "Return from COBYLA because the trust region radius reaches its lower bound.",
+    "nfev": 34,
+    "nit": 34,
+    "restarts": 3,
+    "maxiter_per_restart": 100
+  },
+  "seed": 42
+}

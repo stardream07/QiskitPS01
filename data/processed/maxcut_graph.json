@@ -1,0 +1,62 @@
+{
+  "problem_statement": "PS-O1: Max-Cut on Weighted Graphs",
+  "num_nodes": 6,
+  "edge_probability": 0.5,
+  "graph_seed": 42,
+  "weight_seed": 42,
+  "weight_range_inclusive": [
+    1,
+    5
+  ],
+  "fixed_node": 0,
+  "fixed_node_value": 0,
+  "logical_qubits_after_symmetry_reduction": 5,
+  "edges": [
+    {
+      "u": 0,
+      "v": 2,
+      "weight": 1
+    },
+    {
+      "u": 0,
+      "v": 3,
+      "weight": 4
+    },
+    {
+      "u": 0,
+      "v": 4,
+      "weight": 4
+    },
+    {
+      "u": 1,
+      "v": 4,
+      "weight": 3
+    },
+    {
+      "u": 1,
+      "v": 5,
+      "weight": 3
+    },
+    {
+      "u": 2,
+      "v": 3,
+      "weight": 5
+    },
+    {
+      "u": 2,
+      "v": 4,
+      "weight": 1
+    },
+    {
+      "u": 3,
+      "v": 4,
+      "weight": 4
+    },
+    {
+      "u": 3,
+      "v": 5,
+      "weight": 2
+    }
+  ],
+  "note": "Graph structure follows the guide's NetworkX recipe. Weight seed 42 is a documented project choice because the guide leaves the weight-generation seed unspecified."
+}
