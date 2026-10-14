@@ -1,7 +1,7 @@
 # Qiskit Fall Fest 2026 - Phase 1, PS-O1
 
 **Selected problem:** PS-O1, Max-Cut on Weighted Graphs.  
-**Team members:** Inderpreet Kaur and Harshit Tripathi.  
+**Team Name:** Velaris.  
 **Repository:** https://github.com/stardream07/QiskitPS01
 
 This project solves the guide's six-node weighted graph with QAOA at both allowed depths, p=1 and p=2, and compares participant-defined Processor A (5 qubits) and Processor B (9 qubits). Exact enumeration gives cut **22**. All four primary noisy runs sampled this optimum; average quality is reported separately from the best sample.
