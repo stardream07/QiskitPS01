@@ -136,23 +136,6 @@ Primary command: `python run_experiment.py` (both depths; 4096 shots per evaluat
 | ipykernel | 7.4.0 |
 | pytest | 9.1.1 |
 
-## 9. Master-guide requirement mapping
-
-| Guide requirement | Evidence | Local state |
-| --- | --- | --- |
-| One selected PS; team of 2-6 | README and submission.json; PS-O1; two named members | Complete |
-| Six-node graph, p=1 or p=2, classical reference | Both allowed depths; saved inputs and full/reduced enumeration | Complete |
-| Participant-defined A(5q)/B(9q), valid basis and common baseline | Processor JSON, routing checks, saved QPY | Complete |
-| Depth, CX, SWAP overhead and solution accuracy | Comparison CSVs; exact/noisy objective, ratios, success and fidelity | Complete |
-| Required modular structure, including routing.py | Root notebook and src modules | Complete |
-| Pinned dependencies and reproducible notebook | Direct/full locks; fresh-kernel execution | Complete after execution audit |
-| Architectural analysis and legible figures | This report; graph, coupling and benchmark plots | Complete |
-| Final public GitHub content and portal submission | Repository URL and external portal acceptance | Requires upload/submission confirmation |
-
-The deadline in the supplied guide is **October 14, 2026, 23:59 IST**. Local correctness and packaging cannot verify event registration or portal acceptance. `submission.json` intentionally records portal confirmation as false until the team completes that external step. No Phase 2 Processor C/D deliverables are required.
-
 ## References
-
-- Supplied Qiskit Fall Fest 2026 Phase 1 Master Challenge Guide: pp. 1-3 (scope, benchmark, structure), p. 4 (PS-O1), p. 7 (rubric/checklist).
 - [Qiskit transpiler and stage hooks](https://quantum.cloud.ibm.com/docs/en/api/qiskit/transpiler).
 - [Qiskit Aer simulator documentation](https://qiskit.github.io/qiskit-aer/tutorials/1_aersimulator.html).
