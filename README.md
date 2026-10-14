@@ -91,6 +91,4 @@ Each depth has a `run_manifest_p*.json` recording versions, seeds, command, sour
 
 The graph is small enough to solve exactly classically. This is an architecture experiment, with no quantum speedup claim. Low-depth QAOA and multistart search do not guarantee a global variational optimum. Processor B is tailored to one graph; synthetic independent noise omits relaxation, crosstalk, timing and calibration drift. Distribution fidelity is a **classical measurement-distribution** metric, not quantum state fidelity.
 
-The local master-guide requirements are audited in `results/tables/compliance_check.json`. The final files must be present in the public repository and its URL submitted at https://qffsrmap2026.com/learning/hackathon by **October 14, 2026, 23:59 IST**. Upload and portal acceptance are external steps; this repository does not assert they have happened. Processor C/D are outside Phase 1.
-
 Read [report.md](report.md) for the full quantitative analysis.
